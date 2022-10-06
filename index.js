@@ -77,14 +77,12 @@ console.log(totalShoppingCart)
 */
 
 const totalShoppingCart = 35
-const shippingCost = 10
+let shippingCost = 10
+let totalAmount
 
-if (totalShoppingCart >= 50) {
-  console.log("Promotion Applies, Shopping Cart higher than 50!")
-} else {
-  console.log("Shipping Cost Applies; Shipping Cost", +shippingCost)
-}
-console.log(totalShoppingCart)
+totalAmount =
+  totalShoppingCart >= 50 ? totalShoppingCart : totalShoppingCart + shippingCost
+console.log("\n", "Your total amount with shipping is:", totalAmount)
 
 /* EXERCISE 7
  You are working on an e-commerce website. Today is Black Friday and everything has a 20% discount at the end of the purchase.
@@ -92,6 +90,17 @@ console.log(totalShoppingCart)
 */
 
 /* WRITE YOUR ANSWER HERE */
+console.log("EXERCISE 7")
+
+let blackFridayDiscount = (totalShoppingCart * 20) / 100
+let totalWithDiscount = totalShoppingCart - blackFridayDiscount
+totalAmount =
+  totalWithDiscount > 50 ? totalWithDiscount : totalWithDiscount + shippingCost
+console.log(
+  "\n",
+  "Your total amount with black friday discount and shipping is",
+  totalAmount
+)
 
 /* EXERCISE 8
  Create a variable and assign to it an object representing a car, with properties like brand, model and licensePlate.
@@ -159,6 +168,7 @@ console.log(carsForRent)
 */
 
 /* WRITE YOUR ANSWER HERE */
+console.log("EXERCISE 11")
 
 console.log(favoriteCar)
 
