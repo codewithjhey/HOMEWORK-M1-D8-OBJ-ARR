@@ -160,6 +160,8 @@ console.log(carsForRent)
 
 /* WRITE YOUR ANSWER HERE */
 
+console.log(favoriteCar)
+
 /* EXERCISE 12
  Create a new variable called carsForSale assigning to it an empty array, and then insert 3 cars into it.
  Create a new variable called totalCars and assign to it the total number of cars present in the carsForSale and carsForRent arrays.
@@ -183,4 +185,10 @@ console.log(totalCars)
 */
 
 /* WRITE YOUR ANSWER HERE */
-console.log("EXERCISE 12")
+console.log("EXERCISE 13")
+for (let i = 0; i < carsForSale.length; i++) {
+  console.log(i)
+  console.log(carsForSale[i])
+}
+
+console.log(carsForSale)
