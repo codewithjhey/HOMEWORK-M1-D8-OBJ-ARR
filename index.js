@@ -4,8 +4,8 @@
 
 /* WRITE YOUR ANSWER HERE */
 console.log("EXERCISE 1")
-const arrayOfPositivesOfNo = [2, 4, 7, 9, 1]
-console.log(arrayOfPositivesOfNo)
+const arrayOfPositivesNo = [2, 4, 7, 9, 1]
+console.log(arrayOfPositivesNo)
 
 /* EXERCISE 2
  Create a variable and assign to it an object containing your name, surname, email address and age.
@@ -56,7 +56,8 @@ secondDetails.surName = "Lord"
 secondDetails.emailAddress = "jaysonlord@gmail.com"
 secondDetails.hasDriversLicense = false
 secondDetails.age = 17
-console.log(secondDetails)
+
+console.log(myDetails.emailAddress !== secondDetails.emailAddress)
 
 /* EXERCISE 6
  You are working on an e-commerce website. In the variable totalShoppingCart you are storing the total amount spent by the current user.
@@ -67,15 +68,6 @@ console.log(secondDetails)
 /* WRITE YOUR ANSWER HERE */
 console.log("EXERCISE 6")
 
-/*const totalShoppingCart = 40
-let costApplies = 10
-const promotionApplies =
-  totalShoppingCart >= 50
-    ? "eligibleForFreeShipping"
-    : "notEligibleForFreeShipping + costApplies"
-console.log(totalShoppingCart)
-*/
-
 const totalShoppingCart = 35
 let shippingCost = 10
 let totalAmount
@@ -83,6 +75,20 @@ let totalAmount
 totalAmount =
   totalShoppingCart >= 50 ? totalShoppingCart : totalShoppingCart + shippingCost
 console.log("\n", "Your total amount with shipping is:", totalAmount)
+
+/* OR
+
+const cartPrice = 50
+const shippingCost = 10
+
+let totalShippingCart; if (cartPrice >= 50) {
+    total = cartPrice;
+    console.log("\n FREE SHIPPING APPPLIES!!!");
+} else {
+    totalShoppingCart = cartPrice + shippingCost;
+    console.log("\n SHIPPING COST APPLIES!!!);
+}
+*/
 
 /* EXERCISE 7
  You are working on an e-commerce website. Today is Black Friday and everything has a 20% discount at the end of the purchase.
@@ -111,6 +117,7 @@ console.log(
 console.log("EXERCISE 8")
 
 const favoriteCar = {
+  carId: "542",
   brand: "Audi",
   model: "Q7",
   licensePlate: "FB76FAD"
@@ -170,7 +177,13 @@ console.log(carsForRent)
 /* WRITE YOUR ANSWER HERE */
 console.log("EXERCISE 11")
 
-console.log(favoriteCar)
+console.log(
+  "\n. The types of car, licenseP plate and brand are as follows:, ",
+  favoriteCar.carId,
+  favoriteCar.brand,
+  favoriteCar.model,
+  favoriteCar.licensePlate
+)
 
 /* EXERCISE 12
  Create a new variable called carsForSale assigning to it an empty array, and then insert 3 cars into it.
@@ -184,10 +197,10 @@ console.log(
 )
 const carsForSale = []
 console.log(carsForSale)
-carsForSale.push("Audi", "Tesla", "Ford")
+carsForSale.push(favoriteCar, favoriteCar2, favoriteCar3)
 console.log(carsForSale)
 
-const totalCars = carsForSale.concat(carsForRent)
+let totalCars = carsForSale.length + carsForRent.length
 console.log(totalCars)
 
 /* EXERCISE 13
@@ -197,8 +210,9 @@ console.log(totalCars)
 /* WRITE YOUR ANSWER HERE */
 console.log("EXERCISE 13")
 for (let i = 0; i < carsForSale.length; i++) {
-  console.log(i)
-  console.log(carsForSale[i])
+  console.log(carsForSale[i].brand)
+  console.log(carsForSale[i].licensePlate)
+  console.log(carsForSale[i].model)
 }
 
 console.log(carsForSale)
